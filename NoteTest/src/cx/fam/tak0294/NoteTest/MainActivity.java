@@ -15,7 +15,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.support.v4.app.NavUtils;
 import cx.fam.tak0294.NoteBook.*;
 import cx.fam.tak0294.NoteBook.Note.NoteBook;
 import cx.fam.tak0294.NoteBook.Note.NoteShelf;
