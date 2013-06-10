@@ -36,13 +36,29 @@ public class CharDrawObject extends DrawObject {
 		RectF bounds = new RectF();
 		m_path.computeBounds(bounds, false);
 		org_height = bounds.height();
+		org_width  = bounds.width();
 		
 		//Å‰‚ÉˆÚ“®‚³‚¹‚é.
 		Matrix m = new Matrix();
 		float padding_y = 0f;
-		if(org_height > NoteGlobal.CHAR_HEIGHT)
+		
+		//----------------------------------------------
+		//	•¶Žš‚Ì”{—¦‚ðŒvŽZ‚·‚é.
+		//----------------------------------------------
+		if(org_height > NoteGlobal.CHAR_HEIGHT || (org_width > NoteGlobal.CHAR_WIDTH && org_width < NoteGlobal.CHAR_WIDTH*4))
 		{
-			m.preScale(NoteGlobal.CHAR_HEIGHT / org_height, NoteGlobal.CHAR_HEIGHT / org_height);
+			//----------------------------------------------
+			//	‰¡•‚ªNoteGlobal.CHAR_WIDTH‚Ì‚S”{‚æ‚è‘å‚«‚¢ê‡‚Í‰¡•‚Íˆ—‚µ‚È‚¢.
+			//----------------------------------------------
+			if(org_height > org_width || (org_width > NoteGlobal.CHAR_WIDTH*4))
+			{
+				m.preScale(NoteGlobal.CHAR_HEIGHT / org_height, NoteGlobal.CHAR_HEIGHT / org_height);
+			}
+			else
+			{
+				m.preScale(NoteGlobal.CHAR_WIDTH / org_width, NoteGlobal.CHAR_WIDTH / org_width);
+				padding_y = NoteGlobal.CHAR_HEIGHT - (org_height * NoteGlobal.CHAR_WIDTH / org_width);
+			}
 		}
 		else
 		{
