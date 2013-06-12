@@ -15,15 +15,15 @@ import android.widget.TextView;
 
 public class UiUtil
 {
-	//‰æ–ÊÅ‘å•‚Å•\¦.
+	//ç”»é¢æœ€å¤§å¹…ã§è¡¨ç¤º.
 	public static final int FP = ViewGroup.LayoutParams.FILL_PARENT;
-	//•K—v‚È•(ƒRƒ“ƒeƒ“ƒc‚ÌÀÛ‚Ì•)‚Å•\¦.
+	//å¿…è¦ãªå¹…(ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã®å®Ÿéš›ã®å¹…)ã§è¡¨ç¤º.
 	public static final int WC = ViewGroup.LayoutParams.WRAP_CONTENT;
 	
 	/*
-	 * RelativeLayoutParams‚Ì¶¬.
-	 * @param	w	•.
-	 * @param	h	‚‚³
+	 * RelativeLayoutParamsã®ç”Ÿæˆ.
+	 * @param	w	å¹….
+	 * @param	h	é«˜ã•
 	 * @return RelativeLayout.LayoutParams
 	 */
 	public static RelativeLayout.LayoutParams createRelativeParam(int w, int h)
@@ -32,20 +32,20 @@ public class UiUtil
 	}
 	
 	/*
-	 * ƒ‰ƒxƒ‹‚Ì¶¬.
-	 * @param text	TextView‚Éİ’è‚·‚é•¶š—ñ
-	 * @param con	TextView‚ğ’Ç‰Á‚·‚éContext
-	 * @return	•¶š—ñ‚Ìİ’è‚³‚ê‚½TextViewƒIƒuƒWƒFƒNƒg
+	 * ãƒ©ãƒ™ãƒ«ã®ç”Ÿæˆ.
+	 * @param text	TextViewã«è¨­å®šã™ã‚‹æ–‡å­—åˆ—
+	 * @param con	TextViewã‚’è¿½åŠ ã™ã‚‹Context
+	 * @return	æ–‡å­—åˆ—ã®è¨­å®šã•ã‚ŒãŸTextViewã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 	 */
 	 public static TextView makeLabel(String text, Context con)
 	 {
-		 //TextView¶¬.
+		 //TextViewç”Ÿæˆ.
 		 TextView label = new TextView(con);
 		 
-		 //•¶š—ñİ’è.
+		 //æ–‡å­—åˆ—è¨­å®š.
 		 label.setText(text);
 		 
-		 //TextView‚Ì•\¦•‚ğ•K—vÅ¬ŒÀ‚Éİ’è.
+		 //TextViewã®è¡¨ç¤ºå¹…ã‚’å¿…è¦æœ€å°é™ã«è¨­å®š.
 		 int WC = ViewGroup.LayoutParams.WRAP_CONTENT;
 		 label.setLayoutParams(new LinearLayout.LayoutParams(WC,WC));
 		 
@@ -53,28 +53,28 @@ public class UiUtil
 	 }
 	 
 	 /*
-	  * ƒeƒLƒXƒgƒGƒfƒBƒ^‚Ì¶¬.
-	  * @param	text	•\¦‚·‚é•¶š—ñ
-	  * @param	w	EditText‚Ì‰¡•
-	  * @param	h	EditText‚Ìc•
-	  * @param con	TextView‚ğ’Ç‰Á‚·‚éContext
-	  * @return	¶¬‚³‚ê‚½TextEditƒIƒuƒWƒFƒNƒg
+	  * ãƒ†ã‚­ã‚¹ãƒˆã‚¨ãƒ‡ã‚£ã‚¿ã®ç”Ÿæˆ.
+	  * @param	text	è¡¨ç¤ºã™ã‚‹æ–‡å­—åˆ—
+	  * @param	w	EditTextã®æ¨ªå¹…
+	  * @param	h	EditTextã®ç¸¦å¹…
+	  * @param con	TextViewã‚’è¿½åŠ ã™ã‚‹Context
+	  * @return	ç”Ÿæˆã•ã‚ŒãŸTextEditã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 	  */
 	 public static EditText makeEditor(String text, int w, int h, Context con)
 	 {
-		 //EditText¶¬
+		 //EditTextç”Ÿæˆ
 		 EditText editor = new EditText(con);
 		 
-		 //‰ŠúƒeƒLƒXƒg‚Ìİ’è.
+		 //åˆæœŸãƒ†ã‚­ã‚¹ãƒˆã®è¨­å®š.
 		 editor.setText(text);
 		 
-		 //editor‚ğ¶Šñ‚¹AãŠñ‚¹‚Éİ’è.
+		 //editorã‚’å·¦å¯„ã›ã€ä¸Šå¯„ã›ã«è¨­å®š.
 		 editor.setGravity(Gravity.LEFT|Gravity.TOP);
 		 
-		 //editor‚Ì•\¦‚·‚é•¶š—ñ‚ª•\¦•‚ğ‰z‚¦‚½ê‡ƒXƒNƒ[ƒ‹‚ğ•\¦‚·‚é‚æ‚¤İ’è.
+		 //editorã®è¡¨ç¤ºã™ã‚‹æ–‡å­—åˆ—ãŒè¡¨ç¤ºå¹…ã‚’è¶ŠãˆãŸå ´åˆã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚’è¡¨ç¤ºã™ã‚‹ã‚ˆã†è¨­å®š.
 		 editor.setHorizontallyScrolling(true);
 		 
-		 //editor‚Ì‰¡•Ac•İ’è.
+		 //editorã®æ¨ªå¹…ã€ç¸¦å¹…è¨­å®š.
 		 editor.setLayoutParams(new LayoutParams(w,h));
 		 
 		 return editor;
@@ -83,26 +83,26 @@ public class UiUtil
 	 
 	 
 	 /*
-	  * ”’l‚Ì‚İ“ü—Í‰Â”\‚ÈƒGƒfƒBƒ^‚Ì¶¬.
-	  * @param	text	•\¦‚·‚é•¶š—ñ
-	  * @param	w	EditText‚Ì‰¡•
-	  * @param	h	EditText‚Ìc•
-	  * @param	width	•\¦•
-	  * @param	maxlen	“ü—Í‰Â”\‚ÈÅ‘åŒ…”
-	  * @param	con	TextEdit‚ğ’Ç‰Á‚·‚éContext
+	  * æ•°å€¤ã®ã¿å…¥åŠ›å¯èƒ½ãªã‚¨ãƒ‡ã‚£ã‚¿ã®ç”Ÿæˆ.
+	  * @param	text	è¡¨ç¤ºã™ã‚‹æ–‡å­—åˆ—
+	  * @param	w	EditTextã®æ¨ªå¹…
+	  * @param	h	EditTextã®ç¸¦å¹…
+	  * @param	width	è¡¨ç¤ºå¹…
+	  * @param	maxlen	å…¥åŠ›å¯èƒ½ãªæœ€å¤§æ¡æ•°
+	  * @param	con	TextEditã‚’è¿½åŠ ã™ã‚‹Context
 	  */
 	 public static EditText makeNumericEditor(String text, int w, int h, int width, int maxlen, Context con)
 	 {
-		 //EditText¶¬.
+		 //EditTextç”Ÿæˆ.
 		 EditText editor = UiUtil.makeEditor(text, w, h, con);
 		 
-		 //•\¦•İ’è.
+		 //è¡¨ç¤ºå¹…è¨­å®š.
 		 editor.setWidth(width);
 		 
-		 //Å‘åŒ…”İ’è.
+		 //æœ€å¤§æ¡æ•°è¨­å®š.
 		 editor.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxlen)});
 		 
-		 //”’l‚Ì‚İ“ü—Í‰Â”\‚Éİ’è.
+		 //æ•°å€¤ã®ã¿å…¥åŠ›å¯èƒ½ã«è¨­å®š.
 		 editor.setInputType(InputType.TYPE_CLASS_NUMBER);
 		 
 		 return editor;
@@ -111,9 +111,9 @@ public class UiUtil
 	 
 	 
 	 /*
-	  * ƒ`ƒFƒbƒNƒ{ƒbƒNƒX‚Ì¶¬
-	  * @param	label	ƒ`ƒFƒbƒNƒ{ƒbƒNƒX‚É•\¦‚·‚é•¶š—ñ.
-	  * @param	con		ƒ`ƒFƒbƒNƒ{ƒbƒNƒX‚ğ’Ç‰Á‚·‚éContext
+	  * ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹ã®ç”Ÿæˆ
+	  * @param	label	ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹ã«è¡¨ç¤ºã™ã‚‹æ–‡å­—åˆ—.
+	  * @param	con		ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹ã‚’è¿½åŠ ã™ã‚‹Context
 	  * @return CheckBox
 	  */
 	 public static CheckBox makeCheckBox(String label, Context con)
@@ -126,9 +126,9 @@ public class UiUtil
 	 
 	 
 	 /*
-	  * ƒ{ƒ^ƒ“‚Ì¶¬.
-	  * @param	label	ƒ{ƒ^ƒ“‚É•\¦‚·‚é•¶š—ñ.
-	  * @param	con		ƒ{ƒ^ƒ“‚ğ’Ç‰Á‚·‚éContext
+	  * ãƒœã‚¿ãƒ³ã®ç”Ÿæˆ.
+	  * @param	label	ãƒœã‚¿ãƒ³ã«è¡¨ç¤ºã™ã‚‹æ–‡å­—åˆ—.
+	  * @param	con		ãƒœã‚¿ãƒ³ã‚’è¿½åŠ ã™ã‚‹Context
 	  * @return	Button
 	  */
 	 public static Button makeButton(String label, Context con)

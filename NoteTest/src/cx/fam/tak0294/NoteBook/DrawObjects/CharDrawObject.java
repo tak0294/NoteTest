@@ -12,43 +12,43 @@ public class CharDrawObject extends DrawObject {
 	
 	public CharDrawObject(Paint paint, Path path, RectF r) {
 		super(paint, path, r);
-		// TODO ©“®¶¬‚³‚ê‚½ƒRƒ“ƒXƒgƒ‰ƒNƒ^[EƒXƒ^ƒu
+		// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãƒ¼ãƒ»ã‚¹ã‚¿ãƒ–
 	}
 
 	@Override
 	public void setPath(Path path) {
-		// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
+		// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
 
 	}
 
 	@Override
 	public void draw(Canvas canvas) {
-		// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
+		// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
 		
 		canvas.drawPath(m_path, m_paint);
 	}
 
 	@Override
 	protected void resize() {
-		// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
+		// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
 		
-		//ƒTƒCƒY‚ğ’²‚×‚é.
+		//ã‚µã‚¤ã‚ºã‚’èª¿ã¹ã‚‹.
 		RectF bounds = new RectF();
 		m_path.computeBounds(bounds, false);
 		org_height = bounds.height();
 		org_width  = bounds.width();
 		
-		//Å‰‚ÉˆÚ“®‚³‚¹‚é.
+		//æœ€åˆã«ç§»å‹•ã•ã›ã‚‹.
 		Matrix m = new Matrix();
 		float padding_y = 0f;
 		
 		//----------------------------------------------
-		//	•¶š‚Ì”{—¦‚ğŒvZ‚·‚é.
+		//	æ–‡å­—ã®å€ç‡ã‚’è¨ˆç®—ã™ã‚‹.
 		//----------------------------------------------
 		if(org_height > NoteGlobal.CHAR_HEIGHT || (org_width > NoteGlobal.CHAR_WIDTH && org_width < NoteGlobal.CHAR_WIDTH*4))
 		{
 			//----------------------------------------------
-			//	‰¡•‚ªNoteGlobal.CHAR_WIDTH‚Ì‚S”{‚æ‚è‘å‚«‚¢ê‡‚Í‰¡•‚Íˆ—‚µ‚È‚¢.
+			//	æ¨ªå¹…ãŒNoteGlobal.CHAR_WIDTHã®ï¼”å€ã‚ˆã‚Šå¤§ãã„å ´åˆã¯æ¨ªå¹…ã¯å‡¦ç†ã—ãªã„.
 			//----------------------------------------------
 			if(org_height > org_width || (org_width > NoteGlobal.CHAR_WIDTH*4))
 			{
@@ -69,11 +69,11 @@ public class CharDrawObject extends DrawObject {
 		m_path.transform(m);
 		m.reset();
 		
-		//‰ºü‘µ‚¦‚É‚·‚é.
+		//ä¸‹ç·šæƒãˆã«ã™ã‚‹.
 		m.preTranslate(0, 10f);
 		m_path.transform(m);
 		
-		//•ÏXŒã‚ÌƒTƒCƒY‚ÅÄæ“¾.
+		//å¤‰æ›´å¾Œã®ã‚µã‚¤ã‚ºã§å†å–å¾—.
 		m_path.computeBounds(bounds, false);
 		org_width  = bounds.width();
 		org_height = bounds.height();

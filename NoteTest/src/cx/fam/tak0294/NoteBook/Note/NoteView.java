@@ -23,12 +23,12 @@ import cx.fam.tak0294.Utils.DisplayUtil;
 
 
 //--------------------------------------------------
-//	ƒm[ƒgViewƒNƒ‰ƒX.
+//	ãƒãƒ¼ãƒˆViewã‚¯ãƒ©ã‚¹.
 //--------------------------------------------------
 public class NoteView extends View
 {
 	//--------------------------------------------------
-	//	ƒƒ“ƒo.
+	//	ãƒ¡ãƒ³ãƒ.
 	//--------------------------------------------------
 	private NoteBook m_noteBook = null;
 	private final int c_noteWidth;
@@ -63,14 +63,14 @@ public class NoteView extends View
 	private boolean m_reDrawRequest = false;
 	
 	//--------------------------------------------------
-	//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^.
+	//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿.
 	//--------------------------------------------------
 	public NoteView(Context context) {
 		super(context);
 		this.setFocusable(true);
 		m_writeWaitTimer = new Timer();
 		m_drawObjects = new ArrayList<ArrayList<DrawObject>>();
-		m_drawObjects.add(new ArrayList<DrawObject>());	//1s–Ú.
+		m_drawObjects.add(new ArrayList<DrawObject>());	//1è¡Œç›®.
 		Rect r = DisplayUtil.getScreenRect(context);
 		c_noteWidth 	= Math.min(r.width(), r.height());
 		c_noteHeight 	= Math.max(r.width(), r.height());
@@ -80,7 +80,7 @@ public class NoteView extends View
 	
 	//-------------------------------------------------------------------------------------------------
 	//
-	//	private ƒƒ\ƒbƒh.
+	//	private ãƒ¡ã‚½ãƒƒãƒ‰.
 	//
 	//-------------------------------------------------------------------------------------------------
 
@@ -96,7 +96,7 @@ public class NoteView extends View
 	}
 	
 	//--------------------------------------------------
-	//	•`‰æ‘Ò‚¿ƒ^ƒCƒ}[ƒXƒ^[ƒg.
+	//	æç”»å¾…ã¡ã‚¿ã‚¤ãƒãƒ¼ã‚¹ã‚¿ãƒ¼ãƒˆ.
 	//--------------------------------------------------
 	private void startWriteWaitTimer()
 	{
@@ -117,7 +117,7 @@ public class NoteView extends View
 						//Make DrawObject.
 						CharDrawObject charObj = new CharDrawObject(m_currentPaint, m_currentPath, new RectF(min_x, min_y, max_x, max_y));
 						
-						//‰æ–Ê‚©‚ç‚Í‚İo‚·ê‡‚ÍV‚µ‚¢s‚É‚·‚é.
+						//ç”»é¢ã‹ã‚‰ã¯ã¿å‡ºã™å ´åˆã¯æ–°ã—ã„è¡Œã«ã™ã‚‹.
 						if(charObj.getOrgWidth() + m_currentCharX + NoteGlobal.NOTE_MARGIN_LEFT > c_noteWidth)
 							newLine();
 						
@@ -140,7 +140,7 @@ public class NoteView extends View
 	}
 	
 	//--------------------------------------------------
-	//	•`‰æ‘Ò‚¿ƒ^ƒCƒ}[ƒXƒgƒbƒv.
+	//	æç”»å¾…ã¡ã‚¿ã‚¤ãƒãƒ¼ã‚¹ãƒˆãƒƒãƒ—.
 	//--------------------------------------------------
 	private void stopWriteWaitTimer()
 	{
@@ -151,7 +151,7 @@ public class NoteView extends View
 	
 	
 	//--------------------------------------------------
-	//	ƒLƒƒƒbƒVƒ…BitmapXV.
+	//	ã‚­ãƒ£ãƒƒã‚·ãƒ¥Bitmapæ›´æ–°.
 	//--------------------------------------------------
 	private void updateCacheBitmap()
 	{
@@ -162,7 +162,7 @@ public class NoteView extends View
 		}
 		m_reDrawRequest = true;
 		//---------------------------------------------
-		//	BitmapƒLƒƒƒbƒVƒ….
+		//	Bitmapã‚­ãƒ£ãƒƒã‚·ãƒ¥.
 		//---------------------------------------------
 		setDrawingCacheEnabled(true);
 		bitmap = Bitmap.createBitmap(getDrawingCache());
@@ -174,12 +174,12 @@ public class NoteView extends View
 	
 	//-------------------------------------------------------------------------------------------------
 	//
-	//	public ƒƒ\ƒbƒh.
+	//	public ãƒ¡ã‚½ãƒƒãƒ‰.
 	//
 	//-------------------------------------------------------------------------------------------------
 	
 	//--------------------------------------------------
-	//	ƒRƒ“ƒgƒ[ƒ‰‚ÌŠ„•t.
+	//	ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ©ã®å‰²ä»˜.
 	//--------------------------------------------------
 	public void setController(NoteBook nb)
 	{
@@ -187,7 +187,7 @@ public class NoteView extends View
 	}
 	
 	//--------------------------------------------------
-	//	ƒ^ƒbƒ`ƒCƒxƒ“ƒg.
+	//	ã‚¿ãƒƒãƒã‚¤ãƒ™ãƒ³ãƒˆ.
 	//--------------------------------------------------
 	public boolean onTouchEvent(MotionEvent e)
 	{
@@ -215,8 +215,8 @@ public class NoteView extends View
 			pos_x = e.getX();
 			pos_y = e.getY();
 			
-			//Å‘åAÅ¬’lXV.
-			//•`‰æ—Ìˆæ‹éŒ`Zo‚Ì‚½‚ß.
+			//æœ€å¤§ã€æœ€å°å€¤æ›´æ–°.
+			//æç”»é ˜åŸŸçŸ©å½¢ç®—å‡ºã®ãŸã‚.
 			if(pos_x > max_x)
 				max_x = pos_x;
 			if(pos_x < min_x)
@@ -232,7 +232,7 @@ public class NoteView extends View
 			
 		case MotionEvent.ACTION_UP:
 			//path.lineTo(e.getX(), e.getY());
-			//ƒLƒƒƒbƒVƒ….
+			//ã‚­ãƒ£ãƒƒã‚·ãƒ¥.
 			/*
 			setDrawingCacheEnabled(true);
 			bitmap = Bitmap.createBitmap(getDrawingCache());
@@ -250,7 +250,7 @@ public class NoteView extends View
 	
 	
 	//--------------------------------------------------
-	//	•`‰æ.
+	//	æç”».
 	//--------------------------------------------------
 	protected void onDraw(Canvas canvas)
 	{
@@ -284,7 +284,7 @@ public class NoteView extends View
 	
 	
 	//--------------------------------------------------
-	//	‰üs.
+	//	æ”¹è¡Œ.
 	//--------------------------------------------------
 	public void newLine()
 	{
@@ -298,7 +298,7 @@ public class NoteView extends View
 	}
 
 	//--------------------------------------------------
-	//	ƒoƒbƒNƒXƒy[ƒX.
+	//	ãƒãƒƒã‚¯ã‚¹ãƒšãƒ¼ã‚¹.
 	//--------------------------------------------------
 	public void backSpace()
 	{
@@ -316,7 +316,7 @@ public class NoteView extends View
 			return;
 		}
 
-		//íœ‘ÎÛ‚ÌDrawObject•ª‚Ì‰¡•‚ğ–ß‚·.
+		//å‰Šé™¤å¯¾è±¡ã®DrawObjectåˆ†ã®æ¨ªå¹…ã‚’æˆ»ã™.
 		DrawObject d = m_drawObjects.get(m_currentLineIndex).remove(m_currentCursorIndex-1);
 		m_currentCharX -= d.getOrgWidth() + NoteGlobal.CHAR_PADDING;
 		m_noteBook.getCursor().setCursorPoints(m_currentCharX, m_currentCharY);
@@ -328,14 +328,14 @@ public class NoteView extends View
 	}
 
 	//--------------------------------------------------
-	//	ƒXƒy[ƒX.
+	//	ã‚¹ãƒšãƒ¼ã‚¹.
 	//--------------------------------------------------
 	public void space()
 	{
 		//Make DrawObject.
 		CharSpaceObject charObj = new CharSpaceObject(null, null, new RectF(0f, 0f, 10f, 0f));
 		
-		//‰æ–Ê‚©‚ç‚Í‚İo‚·ê‡‚ÍV‚µ‚¢s‚É‚·‚é.
+		//ç”»é¢ã‹ã‚‰ã¯ã¿å‡ºã™å ´åˆã¯æ–°ã—ã„è¡Œã«ã™ã‚‹.
 		if(charObj.getOrgWidth() + m_currentCharX + NoteGlobal.NOTE_MARGIN_LEFT > c_noteWidth)
 			newLine();
 		

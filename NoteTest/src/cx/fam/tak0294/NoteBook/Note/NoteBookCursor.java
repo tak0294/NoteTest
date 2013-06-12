@@ -13,11 +13,11 @@ import android.view.View;
 public class NoteBookCursor extends TimerTask
 {
 	//---------------------------------------
-	//	ƒƒ“ƒo.
+	//	ãƒ¡ãƒ³ãƒ.
 	//---------------------------------------
 	private NoteBook m_noteBook;
 	private NoteBookCursorView m_cursorView;
-	private int m_blinkInterval = 500;	//“_–Åƒ~ƒŠ•b.
+	private int m_blinkInterval = 500;	//ç‚¹æ»…ãƒŸãƒªç§’.
 	private Handler m_handler;
 	private Timer m_cursorTimer;
 	
@@ -36,7 +36,7 @@ public class NoteBookCursor extends TimerTask
 		{
 			@Override
 			public void run() {
-				// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
+				// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
 				m_cursorView.invalidate();
 			}
 		});

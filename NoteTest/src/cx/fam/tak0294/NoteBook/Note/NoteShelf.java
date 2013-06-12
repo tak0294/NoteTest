@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import android.content.Context;
 
 //--------------------------------------------
-//	ƒm[ƒg’IƒNƒ‰ƒX.
+//	ãƒãƒ¼ãƒˆæ£šã‚¯ãƒ©ã‚¹.
 //--------------------------------------------
 public class NoteShelf
 {
@@ -13,7 +13,7 @@ public class NoteShelf
 	private Context m_context = null;
 	
 	//--------------------------------------------
-	//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^.
+	//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿.
 	//--------------------------------------------
 	public NoteShelf(Context context)
 	{
@@ -22,7 +22,7 @@ public class NoteShelf
 	}
 	
 	//--------------------------------------------
-	//	Contextæ“¾.
+	//	Contextå–å¾—.
 	//--------------------------------------------
 	public Context getContext()
 	{
@@ -30,7 +30,7 @@ public class NoteShelf
 	}
 	
 	//--------------------------------------------
-	//	ƒm[ƒg’Ç‰Á.
+	//	ãƒãƒ¼ãƒˆè¿½åŠ .
 	//--------------------------------------------
 	public NoteBook addNoteBook()
 	{

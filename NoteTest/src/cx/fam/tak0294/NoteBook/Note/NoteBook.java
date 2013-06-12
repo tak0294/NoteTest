@@ -15,7 +15,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 //--------------------------------------------
-//	ƒm[ƒgƒNƒ‰ƒX.
+//	ãƒãƒ¼ãƒˆã‚¯ãƒ©ã‚¹.
 //--------------------------------------------
 public class NoteBook
 {
@@ -33,7 +33,7 @@ public class NoteBook
 	private NoteBookCursor m_cursor = null;
 	
 	//--------------------------------------------
-	//	ƒRƒ“ƒXƒgƒ‰ƒNƒ^.
+	//	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿.
 	//--------------------------------------------
 	public NoteBook(NoteShelf noteShelf)
 	{
@@ -45,9 +45,9 @@ public class NoteBook
 		m_footerToolsLayout.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM);
 		
 		//----------------------------------------
-		//	‰üsƒ{ƒ^ƒ“.
+		//	æ”¹è¡Œãƒœã‚¿ãƒ³.
 		//----------------------------------------
-		m_newLineButton = UiUtil.makeButton("@‰üs@", getContext());
+		m_newLineButton = UiUtil.makeButton("ã€€æ”¹è¡Œã€€", getContext());
 		m_newLineButton.setOnClickListener(new OnClickListener(){
 
 			@Override
@@ -59,9 +59,9 @@ public class NoteBook
 		m_footerToolsLayout.addView(m_newLineButton);
 		
 		//----------------------------------------
-		//	ƒoƒbƒNƒXƒy[ƒXƒ{ƒ^ƒ“.
+		//	ãƒãƒƒã‚¯ã‚¹ãƒšãƒ¼ã‚¹ãƒœã‚¿ãƒ³.
 		//----------------------------------------
-		m_backSpaceButton = UiUtil.makeButton("@@BS@@", getContext());
+		m_backSpaceButton = UiUtil.makeButton("ã€€ã€€BSã€€ã€€", getContext());
 		m_backSpaceButton.setOnClickListener(new OnClickListener(){
 
 			@Override
@@ -74,7 +74,7 @@ public class NoteBook
 		m_footerToolsLayout.addView(m_backSpaceButton);
 		
 		//----------------------------------------
-		//	ƒXƒy[ƒXƒ{ƒ^ƒ“.
+		//	ã‚¹ãƒšãƒ¼ã‚¹ãƒœã‚¿ãƒ³.
 		//----------------------------------------
 		m_spaceButton = UiUtil.makeButton("  SPACE  ", getContext());
 		m_spaceButton.setOnClickListener(new OnClickListener(){
@@ -101,7 +101,7 @@ public class NoteBook
 	}
 	
 	//--------------------------------------------
-	//	MainFrameæ“¾.
+	//	MainFrameå–å¾—.
 	//--------------------------------------------
 	public FrameLayout getMainFrame()
 	{
@@ -109,7 +109,7 @@ public class NoteBook
 	}
 	
 	//--------------------------------------------
-	//	Cursoræ“¾.
+	//	Cursorå–å¾—.
 	//--------------------------------------------
 	public NoteBookCursor getCursor()
 	{
@@ -117,7 +117,7 @@ public class NoteBook
 	}
 	
 	//--------------------------------------------
-	//	Contextæ“¾.
+	//	Contextå–å¾—.
 	//--------------------------------------------
 	public Context getContext()
 	{
@@ -125,7 +125,7 @@ public class NoteBook
 	}
 	
 	//--------------------------------------------
-	//	ƒy[ƒW’Ç‰Á.
+	//	ãƒšãƒ¼ã‚¸è¿½åŠ .
 	//--------------------------------------------
 	public NoteView addNoteView()
 	{
@@ -137,7 +137,7 @@ public class NoteBook
 	}
 	
 	//--------------------------------------------
-	//	ƒJƒŒƒ“ƒgƒy[ƒWİ’è.
+	//	ã‚«ãƒ¬ãƒ³ãƒˆãƒšãƒ¼ã‚¸è¨­å®š.
 	//--------------------------------------------
 	public void setCurrentNoteView(NoteView note)
 	{
